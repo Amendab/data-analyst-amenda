@@ -8,6 +8,7 @@ Project 1 Title: Maintaining Integrity: An Exploratory Data Analysis of Academic
 Objective: To address the question: Which Course accounts for the highest number of academic integrity violations?
 This analysis aims to help UCW understand the distribution of violations across courses and recommend tailored strategies for improvement.
 Dataset: The UCW Academic Integrity dataset is a CSV file containing academic integrity data for MBA students in 2024. It includes 10 columns and 50 records, providing insights into integrity trends across the MBA program. The dataset includes details such as:
+
 •	Student ID: Unique identifier for each student.
 •	Course Code: The course associated with the assignment. This includes six course codes; MBA601, MBA602, MBA603, and MBA604.
 •	Assignment Type: The type of academic work. This includes three types; essay, group project, and presentation.
