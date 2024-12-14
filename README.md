@@ -1,9 +1,7 @@
 **Exploratory Data Analysis**
 
 
-**Project Title:** 
-
-Urban Greenery Insights: An Exploratory Data Analysis of Bowhall Red Maple Trees in Vancouver
+**An Exploratory Data Analysis of Bowhall Red Maple Trees in Vancouver**
 
 
 
@@ -11,6 +9,7 @@ Urban Greenery Insights: An Exploratory Data Analysis of Bowhall Red Maple Trees
 
 This project focuses on analyzing data from the City of Vancouver’s Open Data Portal, specifically on Bowhall Red Maple trees planted between 2014 and 2024. The Exploratory Data Analysis (EDA) process began with examining and transforming raw data into structured, meaningful formats using AWS services. The primary objective was to uncover patterns and trends in tree planting by analyzing height categories, diameters, and annual planting activity. These insights aim to enhance the understanding of urban forestry practices and support the optimization of tree-planting strategies for better greenery management and sustainable urban planning.
 
+![EA_Analysis Process (F0)](https://github.com/user-attachments/assets/b809fcc7-edff-4ba1-a749-9aa3ee226784)
 
 
 **Objective:**
@@ -48,21 +47,26 @@ Out of the 21 columns, the analysis mainly focused on the most relevant fields r
 - Upload Data to AWS S3: Stored the dataset by creating a raw bucket in Amazon S3 for secure and scalable storage.
 
 **Figure 1:** Data Ingestion for Raw Bucket in S3
+![EA_Data Ingestion for Raw Bucket in S3 (F1)](https://github.com/user-attachments/assets/d1b9dd0a-d784-4453-8c77-35730c757627)
+
 
 **•	Data Profiling**
 
 -  AWS Glue Data Brew was used for data profiling on the dataset we ingested to the S3 raw bucket, and then identify quality issues like missing values and inconsistent formatting. In order to save the profiled data, a bucket was created with subfolders for profiled and cleaned data, and profiling results were stored in the data profiling folder for analysis.
 
 **Figure 2:** Data Profile Overview
+![EA_Data Profiling  (F2)](https://github.com/user-attachments/assets/f79c1190-d3b3-4143-8e24-c03e20ddd561)
+
 
 **•	Data Cleaning**
 
 - The data cleaning procedure in this step involves handling missing values, correcting data types, renaming columns, and removing irrelevant columns, resulting in seven key fields for analysis.
 
 **Figure 3:** Data cleaning 
+![EA_Data Cleaning (F3)](https://github.com/user-attachments/assets/1e19358c-129e-4d88-b73a-aa19a2158971)
 
 
-•	Data Transformation
+**•	Data Transformation**
 
 - An ETL Pipeline has been created to transform the cleaned data into structured and analyzable format. Under this exploratory analysis, one major goal was to determine whether there is a meaningful relationship between the two variables of the dataset; average Height Range ID and the average Diameter of the planted Bowhall Red Maple trees.
 
@@ -70,8 +74,8 @@ Out of the 21 columns, the analysis mainly focused on the most relevant fields r
   - System Output: Data in Parquet format for efficient querying.
   - User Output: Data in CSV format for interpretation
 
-
 **Figure 4:**  ETL Pipeline
+![EA_ETL Pipeline (F4)](https://github.com/user-attachments/assets/91fc903f-c201-4548-bd3e-7f8500ebce19)
 
 
 **•	Obtaining Results**
@@ -79,11 +83,15 @@ Out of the 21 columns, the analysis mainly focused on the most relevant fields r
 - To obtain the analytical result, SQL query will be run by using the ETL pipeline output saved under User (with CSV format) in the S3 bucket.
 
 **Figure 5:** Pipeline output – User
+![EA_Pipeline output – User(F5)](https://github.com/user-attachments/assets/079c6720-b962-4355-b653-09bc627b5f72)
+
 
 - This query result helps in analyzing a meaningful relationship between the key variables of the dataset; average Height range ID and the average diameter of the planted Bowhall Red Maple trees.
 
 
 **Figure 6:** Analysis result obtained by running SQL query on the ETL pipeline  
+<img width="511" alt="EA_SQL Results (F6)" src="https://github.com/user-attachments/assets/7afed618-cca4-46dc-a288-67801e6ee2e3" />
+
 
 
 **•	Data Visualization and Insights**
@@ -96,6 +104,7 @@ Out of the 21 columns, the analysis mainly focused on the most relevant fields r
 
 
 **Figure 7**:  Data Visualization for two metrics (average height range ID & average diameter) 
+<img width="931" alt="EA_Data Visualization (F7)" src="https://github.com/user-attachments/assets/0e52c4d1-af76-4246-9573-1e43bedf35a6" />
 
 
 •	Analyze the Outcome and gain Insights of the exploratory analysis:
@@ -105,7 +114,10 @@ Out of the 21 columns, the analysis mainly focused on the most relevant fields r
 - Planted tree Size Preferences: Trees in the 10–20 ft range (Height Range ID: 1) were the most commonly planted.
 
 - Yearly Variations: Taller trees were planted in years like 2015 and 2018, reflecting potential strategic shifts.
-Tools and Technologies:
+
+
+
+**Tools and Technologies:**
 
 •	AWS S3:
 
