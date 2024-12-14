@@ -14,14 +14,22 @@ To perform a descriptive analysis of Bowhall Red Maple trees, specifically inves
 The dataset file used in this exploratory analysis had 21 columns and 429 records detailing the Bowhall Red Maple trees planted in Vancouver between 2014 and 2024. This comprehensive dataset provides a detailed overview of planting trends, tree sizes, and locations, serving as a foundation for evaluating urban forestry strategies to implement in the city of Vancouver. 
 Out of the 21 columns, the analysis mainly focused on the most relevant fields related to answering the business question and calculating the correlation between Height Range ID and Diameter
 
-•	Student ID: Unique identifier for each student.
-•	Tree ID: A unique identifier for each tree.
-•	Civic Number: Specifies the tree's location.
-•	Common Name: Identifies the species as Bowhall Red Maple.
-•	Height Range ID: Assigns trees to predefined height categories.
-•	Height Range: Describes the height range (e.g., 0–10 ft, 10–20 ft).
-•	Diameter: Represents the tree trunk diameter in inches.
-•	Date Planted: Records the planting date for each tree
+-	Student ID: Unique identifier for each student.
+
+-	Tree ID: A unique identifier for each tree.
+
+-	Civic Number: Specifies the tree's location.
+
+-	Common Name: Identifies the species as Bowhall Red Maple.
+
+-	Height Range ID: Assigns trees to predefined height categories.
+
+-	Height Range: Describes the height range (e.g., 0–10 ft, 10–20 ft).
+
+-	Diameter: Represents the tree trunk diameter in inches.
+
+-	Date Planted: Records the planting date for each tree
+  
 
 **Methodology:**
 
@@ -53,6 +61,7 @@ Out of the 21 columns, the analysis mainly focused on the most relevant fields r
 
 **Figure 4:** ETL Pipeline
 
+
 **•	Obtain Obtaining Results**
 
 - To obtain the analytical result, SQL query will be run by using the ETL pipeline output saved under User (with CSV format) in the S3 bucket.
@@ -66,7 +75,9 @@ Figure 5:
 **•	DataVisualization and Insights**
 
 - Using the ‘City of Vancouver’s Open Data Portal’, the data has been visualized:
+
 - A Column chart has been used to identify valuable patterns such as the average Height range ID.
+
 - Insights from these visualizations will help to summarize a data set's main characteristics and identify trends and patterns of data.
 
 **•	Visualization and Insights**
@@ -83,10 +94,13 @@ Figure 5:
 - Height Range ID #2: The second most common, suggesting a focus on moderate-height trees.
 - Height Range IDs #0 and #3: Fewer trees planted in these categories, indicating they are less favored by the city's urban forestry practice
 
+
 **Tools and Technologies:**
 
 **AWS S3:**
+
 •	Used for storing the raw, cleaned, and transformed datasets securely.
+
 •	Used to run  SQL query for user output generated through ETL Pipeline.
 
 **AWS Glue DataBrew:**
@@ -101,12 +115,18 @@ Figure 5:
 
 •	Used to source datasets for analysis and generate data visualization and graphical representation of results.
 
+
 **Deliverables:**
 
 Insights generated from the Descriptive analysis, include:
+
 •	Planting Trends: Identification of yearly trends in planting Bowhall Red Maple trees, highlighting years with the highest planting activity.
+
 •	Descriptive Analysis 
+
     - Insights into yearly planting trends 
+    
     - Analysis of Height Range ID categories
+    
     - Metric: Average Height Range ID for trees planted in 2015.
 
