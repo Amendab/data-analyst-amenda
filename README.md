@@ -90,6 +90,7 @@ Figure 5:
 •	Used to run  SQL query for user output generated through ETL Pipeline.
 
 **AWS Glue DataBrew:**
+
 •	For profiling and cleaning the data.
 
 **AWS Glue:**
