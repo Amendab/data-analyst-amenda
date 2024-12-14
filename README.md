@@ -74,6 +74,8 @@ Out of the 21 columns, the analysis mainly focused on the most relevant fields r
 	- The pipeline involves quality checks for completion, uniqueness, and freshness, ensuring that Height ID range and Diameter fields have 99% or greater completion, Tree IDs have a uniqueness rate of 99% or higher and data records are fresh (updated within the last 24 hours).
  
  **Figure 5:** Data Evaluated with ETL Pipeline 
+ ![DQ_Data Evaluated with ETL Pipeline (F5)](https://github.com/user-attachments/assets/272fa220-9c7b-4e33-82f8-8276f3121ff9)
+
 
 - The results of this ETL pipeline are stored in two subfolders created as Passed and Failed in a new S3 transform bucket created as ‘Data-Quality.’
 
