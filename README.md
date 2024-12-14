@@ -1,78 +1,139 @@
-# data-analyst-amenda
-
 **Exploratory Data Analysis**
 
-Project Description: The project analyzed academic integrity data from the MBA program at University Canada West (UCW) for 2024, focusing on understanding the distribution of academic violations across different course codes. The aim was to use AWS tools for data storage, processing, and visualization to identify and evaluate courses with the highest violation rates and recommend improvements for promoting academic honesty.
 
-Project 1 Title: Maintaining Integrity: An Exploratory Data Analysis of Academic Violations at UCW
-Objective: To address the question: Which Course accounts for the highest number of academic integrity violations?
-This analysis aims to help UCW understand the distribution of violations across courses and recommend tailored strategies for improvement.
-Dataset: The UCW Academic Integrity dataset is a CSV file containing academic integrity data for MBA students in 2024. It includes 10 columns and 50 records, providing insights into integrity trends across the MBA program. The dataset includes details such as:
+**Project Title:** 
+
+Urban Greenery Insights: An Exploratory Data Analysis of Bowhall Red Maple Trees in Vancouver
+
+
+
+**Project Description:** 
+
+This project focuses on analyzing data from the City of Vancouver’s Open Data Portal, specifically on Bowhall Red Maple trees planted between 2014 and 2024. The Exploratory Data Analysis (EDA) process began with examining and transforming raw data into structured, meaningful formats using AWS services. The primary objective was to uncover patterns and trends in tree planting by analyzing height categories, diameters, and annual planting activity. These insights aim to enhance the understanding of urban forestry practices and support the optimization of tree-planting strategies for better greenery management and sustainable urban planning.
+
+
+
+**Objective:**
+
+
+What patterns and insights can be derived from the planting activities of Bowhall Red Maple trees over the past decade (2014–2024)?
+The analysis also aims to examine the correlation between Height Range ID and Diameter, offering deeper insights into the characteristics of planted trees. This will support recommendations for enhancing future urban forestry initiatives.
+
+**Dataset:**
+
+The dataset file used in this exploratory analysis had 21 columns and 429 records detailing the Bowhall Red Maple trees planted in Vancouver between 2014 and 2024. This comprehensive dataset provides a detailed overview of planting trends, tree sizes, and locations, serving as a foundation for evaluating urban forestry strategies to implement in the city of Vancouver. 
+Out of the 21 columns, the analysis mainly focused on the most relevant fields related to answering the business question and calculating the correlation between Height Range ID and Diameter
 
 •	Student ID: Unique identifier for each student.
-•	Course Code: The course associated with the assignment. This includes six course codes; MBA601, MBA602, MBA603, and MBA604.
-•	Assignment Type: The type of academic work. This includes three types; essay, group project, and presentation.
-•	Turnitin Score: Percentage of similarity detected in the assignment.
-•	Violation Occurrence: Whether a violation occurred (Yes/No).
-•	Violation Type: Type of violation. This includes plagiarism and collusion.
-•	Sanction Imposed: Penalty for the violation. This includes Grade Reduction, Warning, Expulsion, and None.
-•	Appeal Status: Whether the sanction was appealed (Yes/No).
-•	Final Decision: Outcome of the appeal (Pending, Dismissed or Upheld)
-Methodology:
-1-	Data Collection and Storage in AWS:
-o	Upload Data to AWS S3: Store your dataset (e.g., CSV file containing academic integrity data) in Amazon S3 for secure and scalable storage.
- 
-2-	Data Cleaning and Profiling: 
-o	AWS Glue DataBrew was used for data profiling and data cleaning. 
-- Data Profiling Steps allowed to perform data profiling and detect data quality issues such as missing values, outliers, and inconsistent formatting.
- 
--  Data Cleaning Steps cleaned the dataset by handling missing values, correcting data types, and renaming column
- 
 
-3-	Data Transformation and Pipeline Creation
-o	After cleaning, the transformed data is stored in a separate S3 bucket named ‘academic-transformed-amenda’. 
-o	This transformed data is optimized and stored in a Parquet format, which is suitable for efficient querying in AWS Athena.
- 
-o	An AWS Glue Data Catalog is created using Crawler to register the metadata for the cleaned dataset, including column names, data types, and file paths.
- 
+•	Tree ID: A unique identifier for each tree.
 
-4-	Data Discovery and Querying with AWS Athena:
-o	Compare Using AWS Athena, SQL queries will be run on the transformed data stored in the S3 bucket. The queries will explore relationships between variables such as Turnitin similarity scores, violation types, and sanctions
- 
-- This query result helps in analyzing patterns by course code and identifying trends related to academic integrity violations.
- 
+•	Civic Number: Specifies the tree's location.
 
-5-	Data Visualization and Insights
-o	Query result is then exported to Microsoft Excel for data visualization:
-- A Bar chart is generated visually to compare the number of violations rate across course Codes.
- 
-Table generated with summarized data generated with Athena
-Course Code	Total Violations #	Total # of Students in each Course 	Violation Percentage from total
-MBA603	12	12	52%
-MBA601	12	13	48%
-MBA604	0	12	0%
-MBA602	0	13	0%
+•	Common Name: Identifies the species as Bowhall Red Maple.
 
-- Insights from these visualizations will help identify key trends, such as whether higher Turnitin similarity scores are correlated with higher violation rates or if certain departments experience more violations.
+•	Height Range ID: Assigns trees to predefined height categories.
 
-6-	Outcome and Insights:
-o	Interpret the query results and identify departments with the highest concentration of violations.
-o	Analyze potential reasons for the distribution, considering factors like department size or assignment complexity.
+•	Height Range: Describes the height range (e.g., 0–10 ft, 10–20 ft).
+
+•	Diameter: Represents the tree trunk diameter in inches.
+
+•	Date Planted: Records the planting date for each tree
+
+
+**Methodology:**
+
+**•	Data Collection and Preparation for Analysis:**
+
+- Upload Data to AWS S3: Stored the dataset by creating a raw bucket in Amazon S3 for secure and scalable storage.
+
+**Figure 1:** Data Ingestion for Raw Bucket in S3
+
+**•	Data Profiling**
+
+-  AWS Glue Data Brew was used for data profiling on the dataset we ingested to the S3 raw bucket, and then identify quality issues like missing values and inconsistent formatting. In order to save the profiled data, a bucket was created with subfolders for profiled and cleaned data, and profiling results were stored in the data profiling folder for analysis.
+
+**Figure 2:** Data Profile Overview
+
+**•	Data Cleaning**
+
+- The data cleaning procedure in this step involves handling missing values, correcting data types, renaming columns, and removing irrelevant columns, resulting in seven key fields for analysis.
+
+**Figure 3:** Data cleaning 
+
+
+•	Data Transformation
+
+- An ETL Pipeline has been created to transform the cleaned data into structured and analyzable format. Under this exploratory analysis, one major goal was to determine whether there is a meaningful relationship between the two variables of the dataset; average Height Range ID and the average Diameter of the planted Bowhall Red Maple trees.
+
+- The output of the pipeline is stored in a bucket created in S3 under 2 folders created as,
+  - System Output: Data in Parquet format for efficient querying.
+  - User Output: Data in CSV format for interpretation
+
+
+**Figure 4:**  ETL Pipeline
+
+
+**•	Obtaining Results**
+
+- To obtain the analytical result, SQL query will be run by using the ETL pipeline output saved under User (with CSV format) in the S3 bucket.
+
+**Figure 5:** Pipeline output – User
+
+- This query result helps in analyzing a meaningful relationship between the key variables of the dataset; average Height range ID and the average diameter of the planted Bowhall Red Maple trees.
+
+
+**Figure 6:** Analysis result obtained by running SQL query on the ETL pipeline  
+
+
+**•	Data Visualization and Insights**
+
+- Using the ‘City of Vancouver’s Open Data Portal’, the data has been visualized:
+
+- A Column chart has been used to identify valuable patterns such as the average Height range ID and the average diameter.
+
+- Insights from these visualizations will help to summarize a data set's main characteristics and identify the correlation between variables
+
+
+**Figure 7**:  Data Visualization for two metrics (average height range ID & average diameter) 
+
+
+•	Analyze the Outcome and gain Insights of the exploratory analysis:
+
+- A strong correlation was observed between the Height Range ID and Diameter, indicating that taller trees (higher Height Range ID) were associated with larger diameters. For example, in 2015, the average Height Range ID and Diameter peaked, signifying a preference for planting taller and more mature trees.
+
+- Planted tree Size Preferences: Trees in the 10–20 ft range (Height Range ID: 1) were the most commonly planted.
+
+- Yearly Variations: Taller trees were planted in years like 2015 and 2018, reflecting potential strategic shifts.
 Tools and Technologies:
-AWS S3:
-•	Used for storing the raw, cleaned, and transformed datasets securely.
 
-AWS Glue:
-•	Used to create the Data Catalog and define metadata for the academic integrity dataset.
-•	Facilitates data transformation and ETL (Extract, Transform, Load) processes.
-AWS Athena:
-•	Allows querying the dataset using SQL for analysis of academic violations by department and course code.
-Microsoft Excel:
-•	Used for additional data visualization and graphical representation of results.
-SQL:
-•	The primary language for querying and analyzing the dataset in AWS Athena.
-Deliverables:
-Insights generated from the exploratory analysis, including:
-•	Identification of potential patterns and anomalies, such as departments or course codes with higher violation rates.
-•	Trends related to Turnitin score ranges and the frequency of academic violations.
-•	Insights into how different departments and courses are affected by academic integrity violations.
+•	AWS S3:
+
+- Used for storing the raw, cleaned, and transformed datasets securely.
+
+- Used to run SQL query for user output generated through ETL Pipeline.
+
+•	AWS Glue DataBrew: 
+
+- For profiling and cleaning the data.
+
+•	AWS Glue:
+
+- Facilitates data transformation and ETL (Extract, Transform, Load) processes.
+
+•	City of Vancouver’s Open Data Portal:
+
+- Used to source datasets for analysis and generate data visualization and graphical representation of results.
+
+
+**Project Deliverables:**
+
+Insights generated from the exploratory analysis, include:
+
+•	Planting Trends: Identification of yearly trends in planting Bowhall Red Maple trees, highlighting years with the highest planting activity.
+
+•	Height and Diameter Patterns: Analysis of height and diameter variations over the years, uncovering preferences for specific tree sizes.
+
+•	Tree Size Preferences: Insights into the most frequently planted height ranges and diameter consistency over time.
+
+•	Planting Strategy Evaluation: Anomalies or shifts in planting strategies, such as years with taller trees or wider diameters being planted.
