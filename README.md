@@ -52,7 +52,7 @@ The UCW Academic Integrity dataset hat has been used for this analysis is a CSV 
 ![DW_Data Profiling  (F2)](https://github.com/user-attachments/assets/144793f1-56dc-4be2-9507-d8397e7871fa)
 
  
-•** Data Cleaning:**
+**• Data Cleaning:**
 
 - The data cleaning procedure in this step involves handling missing values, correcting data types, renaming columns, and removing irrelevant columns,
 
@@ -144,6 +144,6 @@ Insights generated from the exploratory analysis, including:
 
 • Athena Query Validation: Day 6
 
-• Report and Deliverables Submission: Day 7.
+• Report and Deliverables Submission: Day 7
 
 The project will be completed within 7 days, following a structured timeline to ensure efficient progress and delivery. On Day 1, the raw dataset will be uploaded to AWS S3 for secure storage, setting up the foundation for subsequent steps. Day 2 focuses on data profiling using AWS Glue DataBrew to identify quality issues such as missing values, outliers, and inconsistent formatting. Over Days 3 and 4, data cleaning will be conducted to address these issues, standardizing formats and ensuring the dataset is well-structured. On Day 5, the cleaned data will be transformed into a Parquet format and stored in a dedicated bucket for optimized querying. Day 6 involves cataloging the data using AWS Glue Crawlers, enabling metadata registration and preparation for further analysis. Finally, on Day 7, a comprehensive diagnostic report will be generated, detailing the findings and ensuring the dataset's readiness for advanced analysis and insights.
