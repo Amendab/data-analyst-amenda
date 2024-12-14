@@ -63,7 +63,7 @@ Out of the 21 columns, the analysis mainly focused on the most relevant fields r
 ![DQ_Data Cleaning (F3)](https://github.com/user-attachments/assets/235ac6fe-8b57-4111-8ad0-91cf039e66f0)
 
  
-• Data Quality Evaluation using ETL Pipeline
+• **Data Quality Evaluation using ETL Pipeline**
 
 - In this step of the process, An ETL Pipeline is created to evaluate the quality of the cleaned dataset stored in the raw bucket.
 
