@@ -42,7 +42,7 @@ Out of the 21 columns, the analysis mainly focused on the most relevant fields r
 
 **Methodology:**
 
-•	Data Collection and Preparation for Analysis:
+  •	Data Collection and Preparation for Analysis:
 - Upload Data to AWS S3: Stored the dataset by creating a raw bucket in Amazon S3 for secure and scalable storage. 
 
 **Figure 1:** Data Ingestion for Raw Bucket in S3
