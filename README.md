@@ -122,11 +122,9 @@ Insights generated from the Descriptive analysis, include:
 
 •	Planting Trends: Identification of yearly trends in planting Bowhall Red Maple trees, highlighting years with the highest planting activity.
 
-•	Descriptive Analysis 
+•	Descriptive Analysis:
 
-    - Insights into yearly planting trends 
-    
-    - Analysis of Height Range ID categories
-    
-    - Metric: Average Height Range ID for trees planted in 2015.
+- Insights into yearly planting trends 
+- Analysis of Height Range ID categories
+- Metric: Average Height Range ID for trees planted in 2015.
 
