@@ -69,8 +69,8 @@ The UCW Academic Integrity dataset hat has been used for this analysis is a CSV 
 **• Data Cataloging**
 
 - After cleaning, the transformed data is stored in a separate S3 bucket created for transformed data in the form of Parquet format, which is suitable for efficient querying in AWS Athena.
- 
-**Figure 5**: Cleaning output – System
+
+- **Figure 5**: Cleaning output – System
  <img width="959" alt="DW_Cleaning output _System (F5)" src="https://github.com/user-attachments/assets/218c0741-8971-49dd-85d6-e793016b5cad" />
 
 - An AWS Glue Data Catalog is then created using Crawler to register the metadata for the cleaned dataset, including column names, data types, and file paths.
@@ -79,7 +79,9 @@ The UCW Academic Integrity dataset hat has been used for this analysis is a CSV 
 <img width="959" alt="DW_Crawler (F6)" src="https://github.com/user-attachments/assets/f4275ace-b2fc-474e-be05-236cfe662430" />
 
  **Figure 7:** Data Cataloge
- 
+![DW_Data Catalog (F7)](https://github.com/user-attachments/assets/0bc67890-8c53-4fac-8be2-ef4e47034e04)
+
+
 **• Data Discovery and Querying with AWS Athena:**
 
 - Using AWS Athena, SQL queries will be run on the transformed data stored in the S3 bucket. The queries will explore relationships between variables such as Turnitin similarity scores, violation types, and sanctions
@@ -87,6 +89,7 @@ The UCW Academic Integrity dataset hat has been used for this analysis is a CSV 
 - This query result helps in analyzing patterns by course code and identifying trends related to academic integrity violations.
 
 **Figure 8**: AWS Athena for running SQL
+
 ![DW_AWS Athena for running SQL (F8)](https://github.com/user-attachments/assets/f9e0d9e1-1015-4b4e-aaaf-04675325f312)
 
  
@@ -96,7 +99,8 @@ o Query result is then exported to Microsoft Excel for data visualization:
 
 - A Bar chart is generated visually to compare the number of violations rate across course Codes. Insights from these visualizations will help identify key trends, such as the course code that has the highest number of violation rate or the trends of violation types in which most students are involved.
 
-**Figure 9:** Data Visualization 
+**Figure 9:** Data Visualization
+
 <img width="359" alt="DW_Data Visualization (F9)" src="https://github.com/user-attachments/assets/15228774-53cb-4d9d-8b56-37ff8bbd85e9" />
 
 
