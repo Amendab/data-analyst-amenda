@@ -1,9 +1,7 @@
 **Descriptive Data Analysis**
 
 
-
-**Project Title:** 
-A Descriptive Analysis of Bowhall Red Maple Trees using Height Trends and Insights
+**A Descriptive Analysis of Bowhall Red Maple Trees using Height Trends and Insights**
 
 
 **Project Description:**
