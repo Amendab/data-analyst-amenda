@@ -67,13 +67,14 @@ Figure 5:
 
 - Using the ‘City of Vancouver’s Open Data Portal’, the data has been visualized:
 - A Column chart has been used to identify valuable patterns such as the average Height range ID.
-- Insights from these visualizations will help to summarize a data set's main characteristics and identify trends and patterns of data. 
-•	Visualization and Insights
-Figure 6:  
-Height ID Categories based on year 
- 
-Note.  (Street Trees Records, 2024)
-•	Analyze the Outcome and gain Insights of the descriptive analysis:
+- Insights from these visualizations will help to summarize a data set's main characteristics and identify trends and patterns of data.
+
+**•	Visualization and Insights**
+
+**Figure 6:** Height ID Categories based on year
+
+**•	Analyze the Outcome and gain Insights of the descriptive analysis:**
+
 - Average Height Range ID in 2015: The average Height Range ID of Bowhall Red Maple trees planted in 2015 was calculated as 1.769 through the SQL result. This result is consistent with the analysis from the City of Vancouver Open Data Portal, which confirms the accuracy and reliability of the pipeline and analysis process
 - Tree Planting Trends (2014–2024): The highest number of Bowhall Red Maple trees was planted in 2015, with a steady decline observed in subsequent years.
 - Height Range ID #1 (trees with heights between 10' and 20') dominated the planting trends, reflecting a preference for smaller to medium-sized trees.
@@ -81,21 +82,30 @@ Note.  (Street Trees Records, 2024)
 - Height Range ID #1: The most planted category.
 - Height Range ID #2: The second most common, suggesting a focus on moderate-height trees.
 - Height Range IDs #0 and #3: Fewer trees planted in these categories, indicating they are less favored by the city's urban forestry practice
-Tools and Technologies:
-AWS S3:
+
+**Tools and Technologies:**
+
+**AWS S3:**
 •	Used for storing the raw, cleaned, and transformed datasets securely.
 •	Used to run  SQL query for user output generated through ETL Pipeline.
-AWS Glue DataBrew: 
+
+**AWS Glue DataBrew:**
 •	For profiling and cleaning the data.
-AWS Glue:
+
+**AWS Glue:**
+
 •	Facilitates data transformation and ETL (Extract, Transform, Load) processes.
-City of Vancouver’s Open Data Portal:
+
+**City of Vancouver’s Open Data Portal:**
+
 •	Used to source datasets for analysis and generate data visualization and graphical representation of results.
-Deliverables:
+
+**Deliverables:**
+
 Insights generated from the Descriptive analysis, include:
 •	Planting Trends: Identification of yearly trends in planting Bowhall Red Maple trees, highlighting years with the highest planting activity.
 •	Descriptive Analysis 
-- Insights into yearly planting trends 
-- Analysis of Height Range ID categories
-- Metric: Average Height Range ID for trees planted in 2015.
+    - Insights into yearly planting trends 
+    - Analysis of Height Range ID categories
+    - Metric: Average Height Range ID for trees planted in 2015.
 
