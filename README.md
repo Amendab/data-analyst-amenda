@@ -5,6 +5,7 @@
 
 
 **Project Description:**
+
 This project leverages the City of Vancouver’s Streets and Transportation dataset, detailing public boulevard trees, including species, locations, and characteristics. Utilizing AWS services for data ingestion, profiling, cleaning, and transformation, the analysis focuses on Bowhall Red Maple trees planted between 2014 and 2024. By categorizing Height Range IDs, the descriptive analysis explores trends in yearly planting patterns and average height distributions. The insights aim to support urban forestry practices, sustainable city planning, and improved environmental management for a greener urban future.
 
 ![DA_Analysis Process (F0)](https://github.com/user-attachments/assets/da0f20cf-f5b4-4916-9a33-1d36686251e2)
@@ -12,11 +13,13 @@ This project leverages the City of Vancouver’s Streets and Transportation data
 
 
 **Objective:**
+
 To perform a descriptive analysis of Bowhall Red Maple trees, specifically investigating the yearly planting trends and average Height Range ID of trees planted in 2015. This metric aims to offer valuable insights into planted tree patterns and urban forestry decisions.
 
 
 
 **Dataset:**
+
 The dataset file used in this exploratory analysis had 21 columns and 429 records detailing the Bowhall Red Maple trees planted in Vancouver between 2014 and 2024. This comprehensive dataset provides a detailed overview of planting trends, tree sizes, and locations, serving as a foundation for evaluating urban forestry strategies to implement in the city of Vancouver. 
 Out of the 21 columns, the analysis mainly focused on the most relevant fields related to answering the business question and calculating the correlation between Height Range ID and Diameter
 
@@ -113,21 +116,21 @@ Out of the 21 columns, the analysis mainly focused on the most relevant fields r
 
 **Tools and Technologies:**
 
-**AWS S3:**
+**• AWS S3:**
 
 •	Used for storing the raw, cleaned, and transformed datasets securely.
 
 •	Used to run  SQL query for user output generated through ETL Pipeline.
 
-**AWS Glue DataBrew:**
+**• AWS Glue DataBrew:**
 
 •	For profiling and cleaning the data.
 
-**AWS Glue:**
+**• AWS Glue:**
 
 •	Facilitates data transformation and ETL (Extract, Transform, Load) processes.
 
-**City of Vancouver’s Open Data Portal:**
+**• City of Vancouver’s Open Data Portal:**
 
 •	Used to source datasets for analysis and generate data visualization and graphical representation of results.
 
