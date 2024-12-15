@@ -9,6 +9,7 @@ This project focuses on data wrangling to prepare a clean and structured dataset
 
 
 **Objective:** 
+
 The primary objective is to ensure the dataset is optimized using cleaning, profiling, and transforming techniques so that it can be used in SQL querying with AWS Athena to analyze trends in violations across courses and recommend strategies for improvement
 Background: Academic integrity is a critical issue in higher education, and identifying patterns in violations can help develop strategies for promoting honesty and ethical behavior. This project addresses data preparation challenges, ensuring that raw data from UCW’s MBA program is refined and ready for analysis. The wrangled dataset will enable the identification of key areas such as courses which are having high trends of academic integrity violations, trends on Violation Type, and what Sanction the university has enforced so far.
 
@@ -35,7 +36,9 @@ The UCW Academic Integrity dataset hat has been used for this analysis is a CSV 
 •	Final Decision: Outcome of the appeal (Pending, Dismissed or Upheld).
 
 
+
 **Methodology:**
+
 • **Data Collection and Preparation for Analysis:**
 
 - Upload Data to AWS S3: Stored the dataset by creating a raw bucket in Amazon S3 for secure and scalable storage. 
@@ -73,6 +76,7 @@ The UCW Academic Integrity dataset hat has been used for this analysis is a CSV 
 - **Figure 5**: Cleaning output – System
  <img width="959" alt="DW_Cleaning output _System (F5)" src="https://github.com/user-attachments/assets/218c0741-8971-49dd-85d6-e793016b5cad" />
 
+
 - An AWS Glue Data Catalog is then created using Crawler to register the metadata for the cleaned dataset, including column names, data types, and file paths.
 
 **Figure 6:** Crawler
@@ -95,13 +99,14 @@ The UCW Academic Integrity dataset hat has been used for this analysis is a CSV 
  
 **• Data Visualization and Insights**
 
-o Query result is then exported to Microsoft Excel for data visualization:
+- Query result is then exported to Microsoft Excel for data visualization:
 
 - A Bar chart is generated visually to compare the number of violations rate across course Codes. Insights from these visualizations will help identify key trends, such as the course code that has the highest number of violation rate or the trends of violation types in which most students are involved.
 
 **Figure 9:** Data Visualization
 
 <img width="359" alt="DW_Data Visualization (F9)" src="https://github.com/user-attachments/assets/15228774-53cb-4d9d-8b56-37ff8bbd85e9" />
+
 
 
 **• Analyzing the Outcome and Generate Insights:**
@@ -112,20 +117,20 @@ o Query result is then exported to Microsoft Excel for data visualization:
 
 **Tools and Technologies:**
 
-**AWS S3:**
+**• AWS S3:**
 - Used for storing the raw, cleaned, and transformed datasets securely.
 
-**AWS Glue:**
+**• AWS Glue:**
 - Used to create the Data Catalog and define metadata for the academic integrity dataset.
 - Facilitates data transformation and ETL (Extract, Transform, Load) processes.
 
-**AWS Athena:**
+**• AWS Athena:**
 - Allows querying the dataset using SQL for analysis of academic violations by department and course code.
 
-**Microsoft Excel:**
+**• Microsoft Excel:**
 - Used for additional data visualization and graphical representation of results.
 
-**SQL:**
+**• SQL:**
 - The primary language for querying and analyzing the dataset in AWS Athena.
 
 **Project Deliverables:**
