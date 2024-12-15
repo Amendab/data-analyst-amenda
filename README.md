@@ -7,17 +7,21 @@
 **Project Description**: 
 
 This project focuses on conducting a diagnostic analysis to identify and address data quality issues in the academic integrity dataset from University Canada West (UCW) by using AWS services. Using AWS Glue DataBrew, the primary objective is to profile the data and diagnose missing values, outliers, and inconsistent formatting. Once the areas are diagnosed, they can be cleaned. This will ensure that the dataset is clean, structured, and ready for analysis, enabling the extraction of insights into academic integrity trends and issues, and facilitating informed actions.
+
 ![DiagAn_Analysis Process (F0)](https://github.com/user-attachments/assets/cdde3916-c8d9-4fb1-92d0-b6593f775547)
 
 
 **Objective:** 
+
 The primary objective is to profile the UCW dataset to detect data quality issues such as missing values, inconsistencies, and outliers. By using AWS Glue DataBrew's profiling features, the project ensures the dataset is refined and well-documented for further analytical use.
 
 
 **Background:** 
+
 Data profiling is a crucial step in data analysis that provides a detailed understanding of a dataset's structure and quality. This project focuses on the UCW dataset, which contains records related to academic performance and integrity. Using AWS Glue DataBrew, the project identifies key data quality issues and suggests potential improvements to prepare the dataset for future analysis.
 
 **Dataset**: 
+
 The UCW Academic Integrity dataset hat has been used for this analysis is a CSV file containing academic integrity data for MBA students in 2024. It includes 10 columns and 50 records, providing insights into integrity trends across the MBA program. The dataset includes details such as:
 
 •	Student ID: Unique identifier for each student.
@@ -83,11 +87,11 @@ The UCW Academic Integrity dataset hat has been used for this analysis is a CSV 
 
 •	AWS S3:
 
-- Used for storing the raw, cleaned, and transformed datasets securely.
+Used for storing the raw, cleaned, and transformed datasets securely.
 
 •	AWS Glue DataBrew: 
 
-- For Data profiling and diagnosing issues in the dataset.
+For Data profiling and diagnosing issues in the dataset.
 
 
 **Project Deliverables:**
