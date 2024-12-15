@@ -8,10 +8,13 @@
 
 **Objective:** 
  The primary objective of this project is to create an efficient data quality control pipeline that validates critical variables, such as Height ID range, Diameter, Tree ID, and planted date, to maintain high standards of data accuracy, completeness, and freshness. By ensuring the quality of the dataset, the project aims to support meaningful analysis and decision-making processes for urban forestry practices.
+ 
 ![DQ_Analysis Process (F0)](https://github.com/user-attachments/assets/0d0ba94f-30cd-47cc-957e-7b9f3f90f2d9)
 
 
-**Background:** Urban forestry management requires high-quality data to plan and maintain city greenery effectively. Public datasets, such as the one used for Bowhall Red Maple trees, can suffer from issues like missing values, duplicates, and outdated information. By addressing these challenges, this initiative ensures that only reliable data is used for further analysis, supporting sustainable city planning efforts and environmental studies.
+**Background:** 
+
+Urban forestry management requires high-quality data to plan and maintain city greenery effectively. Public datasets, such as the one used for Bowhall Red Maple trees, can suffer from issues like missing values, duplicates, and outdated information. By addressing these challenges, this initiative ensures that only reliable data is used for further analysis, supporting sustainable city planning efforts and environmental studies.
 
 
 **Dataset:** 
@@ -71,7 +74,8 @@ Out of the 21 columns, the analysis mainly focused on the most relevant fields r
 ![DQ_ETL Pipeline for Data Governance (F4)](https://github.com/user-attachments/assets/152595c4-35e6-4950-868e-9059c3c129d8)
 
 
-	- The pipeline involves quality checks for completion, uniqueness, and freshness, ensuring that Height ID range and Diameter fields have 99% or greater completion, Tree IDs have a uniqueness rate of 99% or higher and data records are fresh (updated within the last 24 hours).
+- The pipeline involves quality checks for completion, uniqueness, and freshness, ensuring that Height ID range and Diameter fields have 99% or greater completion, Tree IDs have a uniqueness rate of 99% or higher and data records are fresh (updated within the last 24 hours).
+ 
  
  **Figure 5:** Data Evaluated with ETL Pipeline 
  ![DQ_Data Evaluated with ETL Pipeline (F5)](https://github.com/user-attachments/assets/272fa220-9c7b-4e33-82f8-8276f3121ff9)
@@ -89,17 +93,18 @@ Out of the 21 columns, the analysis mainly focused on the most relevant fields r
 ![DQ_Pipeline output- System – Quality failed (F7)](https://github.com/user-attachments/assets/d595f2e8-36e8-4c7a-8af3-d8ca9dce5b09)
 
  
-**Tools and Technologies:**
+ 
+ **Tools and Technologies:**
 
-**AWS S3:**
+**• AWS S3:**
 
 - Used for storing the raw, cleaned, and transformed datasets securely.
 
-**AWS Glue DataBrew:** 
+**• AWS Glue DataBrew:** 
 
 - For profiling and cleaning the data.
 
-**AWS Glue:**
+**• AWS Glue:**
 
 - Facilitates data transformation and ETL (Extract, Transform, Load) processes.
 
