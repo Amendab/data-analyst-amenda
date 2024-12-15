@@ -8,6 +8,7 @@
 
 This project focuses on conducting a diagnostic analysis to identify and address data quality issues in the academic integrity dataset from University Canada West (UCW) by using AWS services. Using AWS Glue DataBrew, the primary objective is to profile the data and diagnose missing values, outliers, and inconsistent formatting. Once the areas are diagnosed, they can be cleaned. This will ensure that the dataset is clean, structured, and ready for analysis, enabling the extraction of insights into academic integrity trends and issues, and facilitating informed actions.
 
+
 ![DiagAn_Analysis Process (F0)](https://github.com/user-attachments/assets/cdde3916-c8d9-4fb1-92d0-b6593f775547)
 
 
