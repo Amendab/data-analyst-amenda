@@ -121,21 +121,21 @@ Out of the 21 columns, the analysis mainly focused on the most relevant fields r
 
 •	AWS S3:
 
-- Used for storing the raw, cleaned, and transformed datasets securely.
+Used for storing the raw, cleaned, and transformed datasets securely.
 
-- Used to run SQL query for user output generated through ETL Pipeline.
+Used to run SQL query for user output generated through ETL Pipeline.
 
 •	AWS Glue DataBrew: 
 
-- For profiling and cleaning the data.
+For profiling and cleaning the data.
 
 •	AWS Glue:
 
-- Facilitates data transformation and ETL (Extract, Transform, Load) processes.
+Facilitates data transformation and ETL (Extract, Transform, Load) processes.
 
 •	City of Vancouver’s Open Data Portal:
 
-- Used to source datasets for analysis and generate data visualization and graphical representation of results.
+Used to source datasets for analysis and generate data visualization and graphical representation of results.
 
 
 **Project Deliverables:**
